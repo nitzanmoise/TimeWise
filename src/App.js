@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Calendar from "./pages/Calendar";
 import Home from "./pages/Home";
 import Requests from "./pages/Requests";
+import AddShift from "./pages/AddShift"
 import { Appbar, Button, Container } from "muicss/react";
 
 import "./App.scss";
@@ -46,6 +47,10 @@ function App() {
             <Route path="/requests">
               <Requests />
             </Route>
+            <Route path="/addShift">
+              <AddShift />
+            </Route>
+
           </Switch>
         </div>
       </Router>

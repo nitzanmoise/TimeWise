@@ -12,6 +12,9 @@ function Home() {
           <li>
             <Link to="/requests">Requests</Link>
           </li>
+          <li>
+            <Link to="/addShift">Add shift</Link>
+          </li>
         </ul>
       </nav>
     </div>

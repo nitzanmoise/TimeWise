@@ -100,7 +100,7 @@ export default function CustomCalendar() {
     const isSelected = day.getDate() === selectedDate.getDate();
     const isToday =
       day.getDate() === today.getDate() && day.getMonth() === today.getMonth();
-    console.log(day.getTime());
+    // console.log(day.getTime());
     let dateTile;
     if (isInCurrentMonth) {
       if (isSunny) {
@@ -110,8 +110,8 @@ export default function CustomCalendar() {
               isSelected
                 ? classes.selectedDayPaper
                 : isToday
-                ? classes.todayPaper
-                : classes.normalDayPaper
+                  ? classes.todayPaper
+                  : classes.normalDayPaper
             }
           >
             <Grid item>
@@ -127,8 +127,8 @@ export default function CustomCalendar() {
               isSelected
                 ? classes.selectedDayPaper
                 : isToday
-                ? classes.todayPaper
-                : classes.normalDayPaper
+                  ? classes.todayPaper
+                  : classes.normalDayPaper
             }
           >
             <Grid item>
@@ -144,8 +144,8 @@ export default function CustomCalendar() {
               isSelected
                 ? classes.selectedDayPaper
                 : isToday
-                ? classes.todayPaper
-                : classes.normalDayPaper
+                  ? classes.todayPaper
+                  : classes.normalDayPaper
             }
           >
             <Grid item>
@@ -161,8 +161,8 @@ export default function CustomCalendar() {
               isSelected
                 ? classes.selectedDayPaper
                 : isToday
-                ? classes.todayPaper
-                : classes.normalDayPaper
+                  ? classes.todayPaper
+                  : classes.normalDayPaper
             }
           >
             <Grid item>
@@ -189,8 +189,8 @@ export default function CustomCalendar() {
               isSelected
                 ? classes.selectedDayPaper
                 : isToday
-                ? classes.todayPaper
-                : classes.normalDayPaper
+                  ? classes.todayPaper
+                  : classes.normalDayPaper
             }
           >
             <Grid item>
