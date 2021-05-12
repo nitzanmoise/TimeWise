@@ -26,18 +26,13 @@ function App() {
 
   return (
     <div>
-      <Router>
-<<<<<<< HEAD
-        <NavBar />
-        <div className="container flex-grow-1">
-          <Switch>
-            <Route path="/" exact component={HomePage} />
-            <Route path="/" exact component={Calendar} />
-            <ProtectedRoute path="/profile" component={Profile} />
-            <ProtectedRoute path="/external-api" component={ExternalApi} />
-=======
-        <div>
-          {/* <Appbar>
+      <div className="container flex-grow-1">
+        <Route path="/" exact component={HomePage} />
+        <Route path="/" exact component={Calendar} />
+        <ProtectedRoute path="/profile" component={Profile} />
+        <ProtectedRoute path="/external-api" component={ExternalApi} />
+      </div>
+      {/* <Appbar>
             <nav>
               <ul>
                 <li>
@@ -47,25 +42,23 @@ function App() {
             </nav>
            
           </Appbar> */}
-          {/* A <Switch> looks through its children <Route>s and
+      {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
-          <Switch>
-            <Route path="/calendar">
-              <Calendar />
-            </Route>
-            <Route path="/home">
-              <Home />
-            </Route>
-            <Route path="/Locations">
-              <Locations />
-            </Route>
-             <Route path="/usersList">
-              <Users />
-            </Route>
->>>>>>> main
-          </Switch>
-        </div>
-        <Footer />
+      <Router>
+        <Switch>
+          <Route path="/calendar">
+            <Calendar />
+          </Route>
+          <Route path="/home">
+            <Home />
+          </Route>
+          <Route path="/Locations">
+            <Locations />
+          </Route>
+          <Route path="/usersList">
+            <Users />
+          </Route>
+        </Switch>
       </Router>
     </div>
   );
