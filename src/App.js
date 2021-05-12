@@ -6,11 +6,14 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Calendar from "./pages/Calendar";
 import Home from "./pages/Home";
 import Locations from "./pages/Locations";
+import Addshifts from "./pages/Addshifts";
+import Test1 from "./pages/Test1";
 import Users from "./pages/Users";
 import { Appbar, Button, Container } from "muicss/react";
 
 
 import "./App.scss";
+
 
 function App() {
   return (
@@ -41,6 +44,15 @@ function App() {
             </Route>
              <Route path="/usersList">
               <Users />
+            </Route>
+            <Route path="/AddShifts">
+              <Addshifts />
+            </Route>
+            <Route path="/AddShifts">
+              <Addshifts />
+            </Route>
+            <Route path="/Test">
+              <Test1 />
             </Route>
           </Switch>
         </div>

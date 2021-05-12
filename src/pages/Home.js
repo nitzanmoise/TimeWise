@@ -30,7 +30,7 @@ function Home() {
      {/* <Header /> */}
       
      <Header />
-     <div className={classes.root}>
+     <div className={classes.root} style={{marginBottom:'150px'}}>
        <Container fixed>
          
       <Grid container spacing={3}>
@@ -52,7 +52,7 @@ function Home() {
           <h3 className="marginTopHome2">Add new shift</h3>
         </Grid>
         <Grid item xs={6}>
-          <Link to="/usersList">
+          <Link to="/AddShifts">
           <Button variant="contained" style={{
         backgroundColor: "#009bcc",
         color:"white",
@@ -103,9 +103,13 @@ function Home() {
       </Grid>
       
       </Container>
+       
+      </div>
+     <div style={{marginTop:'100px'}}>
+   <Footer />
+  </div>
     </div>
-     <Footer/>
-   </div>
+   
   );
 }
 
