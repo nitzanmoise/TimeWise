@@ -12,6 +12,23 @@ import Button from "@material-ui/core/Button";
 import Box from "@material-ui/core/Box";
 import { useAuth0 } from "@auth0/auth0-react";
 
+
+
+
+// const usePathname = () => {
+//   const location = useLocation();
+//   return location.pathname;
+// }
+
+// console.log(usePathname)
+
+
+
+
+
+
+
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -23,7 +40,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Home() {
+function Home(props) {
+
+  // getting the current path name and removing the first character "/"
+  const currentPageName = props.location.pathname.substring(1);
+  console.log(currentPageName);
+
+
+
+
+
+
   const { user } = useAuth0();
 
   const classes = useStyles();

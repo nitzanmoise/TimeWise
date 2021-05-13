@@ -17,7 +17,7 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 import LogoutButton from '../components/logout-button';
 import { Link } from "react-router-dom";
 import {
- 
+
   Container,
   List,
   ListItem,
@@ -25,6 +25,9 @@ import {
   Hidden
 } from "@material-ui/core";
 import SideDrawer from "./SideDrawer";
+
+
+
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -140,6 +143,7 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
+
       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
       <MenuItem onClick={handleMenuClose}>My account</MenuItem>
     </Menu>
@@ -174,25 +178,25 @@ export default function PrimarySearchAppBar() {
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <Link to='/profile'>
-        <IconButton
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
-        >
-          <AccountCircle />
-        </IconButton>
+          <IconButton
+            aria-label="account of current user"
+            aria-controls="primary-search-account-menu"
+            aria-haspopup="true"
+            color="inherit"
+          >
+            <AccountCircle />
+          </IconButton>
         </Link>
         <p>Profile</p>
       </MenuItem>
-       <MenuItem>
+      <MenuItem>
         <IconButton aria-label="show 11 new notifications" color="inherit">
           <div >
-            <LogoutButton className="buttonCustomLogout"/>
-         
+            <LogoutButton className="buttonCustomLogout" />
+
           </div>
         </IconButton>
-       
+
       </MenuItem>
     </Menu>
   );
@@ -207,13 +211,13 @@ export default function PrimarySearchAppBar() {
             color="inherit"
             aria-label="open drawer"
           >
-              
-            
+
+
             {/* <MenuIcon /> */}
-             <SideDrawer navLinks={navLinks} />
+            <SideDrawer navLinks={navLinks} />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-           Manager Name
+            {/* {user.nickname} */}
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
