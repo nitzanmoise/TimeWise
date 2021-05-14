@@ -35,12 +35,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Addshifts({ addShift, getShiftDetails }) {
+function Addshifts(props) {
   const classes = useStyles();
   const [shiftLocation, setshiftLocation] = useState("");
   const [shiftTime, setShiftTime] = useState("");
   // const [shift, setShift] = useState({});
-  function sendShiftData() {}
+  function sendShiftData() { }
   let newShift = {};
 
   function addShiftToCalendar(day) {
@@ -57,7 +57,8 @@ function Addshifts({ addShift, getShiftDetails }) {
       shiftTime,
       shiftLocation,
     };
-    getShiftDetails(newShift);
+    // props.getShiftDetails(newShift);
+    console.log(props.getShiftDetails)
     // setShift(newShift);
   }
 
@@ -180,10 +181,5 @@ function Addshifts({ addShift, getShiftDetails }) {
   );
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    addShift: (newShift) => dispatch(addShift(newShift)),
-  };
-};
 
-export default connect(mapDispatchToProps)(Addshifts);
+export default Addshifts;

@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import ReactDOM from "react-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 import { NavBar, Footer, Loading } from "./components";
@@ -27,7 +27,6 @@ import "./App.scss";
 function App() {
   const { isAuthenticated } = useAuth0();
   const { isLoading } = useAuth0();
-  const [shift, setShif] = useState({});
 
   if (isLoading) {
     return <Loading />;
