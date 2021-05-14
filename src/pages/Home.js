@@ -15,19 +15,6 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 
 
-// const usePathname = () => {
-//   const location = useLocation();
-//   return location.pathname;
-// }
-
-// console.log(usePathname)
-
-
-
-
-
-
-
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -40,14 +27,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
+
+
+
 function Home(props) {
+
 
   // getting the current path name and removing the first character "/"
   const currentPageName = props.location.pathname.substring(1);
   console.log(currentPageName);
-
-
-
 
 
 
@@ -66,7 +55,9 @@ function Home(props) {
             <Grid item xs={6}>
               <h2 className={(classes.paper, "marginTopHome1")}>
                 {/* {JSON.stringify(user, null, 2)} */}
-                Hello {user.nickname}
+                {/* Hello {user.nickname} */}
+                This page is: {currentPageName}
+
               </h2>
             </Grid>
             <Grid item xs={6}>
@@ -174,3 +165,4 @@ function Home(props) {
 }
 
 export default Home;
+

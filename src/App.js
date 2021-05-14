@@ -50,6 +50,7 @@ function App() {
             renders the first one that matches the current URL. */}
       <Router>
         <Switch>
+          {/* <ProtectedRoute path="/home" component={(props) => <Header {...props} component={Home} />} /> */}
           <ProtectedRoute path="/home" component={Home} />
           <ProtectedRoute path="/calendar" component={Calendar} />
           <ProtectedRoute path="/Locations" component={Locations} />
@@ -60,6 +61,7 @@ function App() {
 
           {isAuthenticated && <Redirect to="/home" from='/' />}
           <Route path="/" exact component={HomePage} />
+
 
 
 
