@@ -1,32 +1,38 @@
 import {
-  FETCH_SHIFTS_REQUEST,
-  FETCH_SHIFTS_SUCCESS,
-  FETCH_SHIFTS_FAILURE,
+  POST_SHIFT_REQUEST,
+  POST_SHIFT_SUCCESS,
+  POST_SHIFT_FAILURE,
+  UPDATE_SHIFT,
 } from "../actions/shiftTypes";
 
 const initialState = {
   loading: false,
-  shifts: [],
+  shift: { name: "Nitzan" },
   error: "",
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case FETCH_SHIFTS_REQUEST:
+    case UPDATE_SHIFT:
+      return {
+        shift: action.payload,
+      };
+
+    case POST_SHIFT_REQUEST:
       return {
         ...state,
         loading: true,
       };
-    case FETCH_SHIFTS_SUCCESS:
+    case POST_SHIFT_SUCCESS:
       return {
         loading: false,
-        shifts: action.payload,
+        shift: action.payload,
         error: "",
       };
-    case FETCH_SHIFTS_FAILURE:
+    case POST_SHIFT_FAILURE:
       return {
         loading: false,
-        shifts: [],
+        shift: {},
         error: action.payload,
       };
 

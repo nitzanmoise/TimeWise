@@ -1,5 +1,7 @@
 import { React, useState } from "react";
 import ReactDOM from "react-dom";
+import { useSelector } from "react-redux";
+
 import { useAuth0 } from "@auth0/auth0-react";
 import { NavBar, Footer, Loading } from "./components";
 import { HomePage, Profile, ExternalApi } from "./views";
@@ -27,14 +29,12 @@ import "./App.scss";
 function App() {
   const { isAuthenticated } = useAuth0();
   const { isLoading } = useAuth0();
+  const shifts = useSelector((state) => state.shifts);
 
   if (isLoading) {
     return <Loading />;
   }
 
-  function getShiftDetails(shift) {
-    console.log(shift, "shift in app");
-  }
   return (
     <div>
       <div className="container flex-grow-1">
@@ -60,11 +60,7 @@ function App() {
           <ProtectedRoute path="/calendar" component={Calendar} />
           <ProtectedRoute path="/Locations" component={Locations} />
           <ProtectedRoute path="/usersList" component={Users} />
-          <ProtectedRoute
-            getShiftDetails={getShiftDetails}
-            path="/AddShifts"
-            component={Addshifts}
-          />
+          <ProtectedRoute path="/AddShifts" component={Addshifts} />
           <ProtectedRoute path="/ConfirmShift" component={Confirmshift} />
           <ProtectedRoute path="/Modal1" component={Modal1} />
           <ProtectedRoute path="/profile" component={Profile} />

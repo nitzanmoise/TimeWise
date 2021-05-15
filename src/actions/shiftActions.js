@@ -4,7 +4,8 @@ import {
   FETCH_SHIFTS_FAILURE,
   POST_SHIFT_REQUEST,
   POST_SHIFT_SUCCESS,
-  POST_SHIFT_FAILURE
+  POST_SHIFT_FAILURE,
+  UPDATE_SHIFT,
 } from "./shiftTypes";
 
 const endpoint = "https://danieldb-2683.restdb.io/rest/timewiseshifts";
@@ -55,8 +56,6 @@ export const fetchShiftsFailure = (error) => {
   };
 };
 
-
-
 // Posting the shifts
 
 export const addShift = (shift) => {
@@ -88,6 +87,7 @@ export const addShift = (shift) => {
       });
   };
 };
+
 // Post functions
 export const postShiftRequest = () => {
   return {
@@ -108,3 +108,14 @@ export const postShiftFailure = (error) => {
   };
 };
 
+export const updateShift = (shiftObj) => {
+  return {
+    type: UPDATE_SHIFT,
+    payload: shiftObj,
+  };
+};
+export const updateShiftToAdd = (shiftObj) => {
+  return (dispatch) => {
+    dispatch(updateShift(shiftObj));
+  };
+};

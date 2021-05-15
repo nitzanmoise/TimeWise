@@ -50,9 +50,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Confirmshift({ newShift }) {
+function Confirmshift() {
   const classes = useStyles();
-  console.log(newShift, "newShift in confirmshift");
   const [open, setOpen] = React.useState(false);
   const [person, setPerson] = React.useState("");
 
@@ -93,7 +92,7 @@ function Confirmshift({ newShift }) {
             </Grid>
 
             <Grid item xs={12}>
-              <h2>{ }</h2>
+              <h2>{}</h2>
             </Grid>
 
             <Container maxWidth="sm" style={{ marginTop: "-20px" }}>

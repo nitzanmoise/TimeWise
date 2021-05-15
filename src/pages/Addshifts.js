@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import CustomCalendar from "../CustomCalendar1";
@@ -15,7 +15,7 @@ import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import Divider from "@material-ui/core/Divider";
 import { connect } from "react-redux";
-import { addShift } from "../actions/shiftActions";
+import { addShift, updateShiftToAdd } from "../actions/shiftActions";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -35,12 +35,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Addshifts(props) {
+function Addshifts({ shiftData, handleAddShift }) {
   const classes = useStyles();
   const [shiftLocation, setshiftLocation] = useState("");
   const [shiftTime, setShiftTime] = useState("");
-  // const [shift, setShift] = useState({});
-  function sendShiftData() { }
   let newShift = {};
 
   function addShiftToCalendar(day) {
@@ -57,9 +55,9 @@ function Addshifts(props) {
       shiftTime,
       shiftLocation,
     };
-    // props.getShiftDetails(newShift);
-    console.log(props.getShiftDetails)
-    // setShift(newShift);
+    console.log(shiftData, "shiftData");
+    handleAddShift(newShift);
+    console.log(shiftData, "shiftData after dispatch");
   }
 
   const handleTimeChange = (event) => {
@@ -158,7 +156,6 @@ function Addshifts(props) {
             <Grid item xs={6} style={{ marginTop: "20px" }}>
               <Link to="/Confirmshift">
                 <Button
-                  onClick={sendShiftData}
                   variant="contained"
                   style={{
                     backgroundColor: "#03DAC5",
@@ -181,5 +178,20 @@ function Addshifts(props) {
   );
 }
 
+const mapStateToProps = (state) => {
+  return {
+    shiftData: state.addShift,
+  };
+};
 
-export default Addshifts;
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     updateShiftToAdd: (newShift) => dispatch(updateShiftToAdd(newShift)),
+//   };
+// };
+
+const mapDispatchToProps = (dispatch) => ({
+  handleAddShift: (newShift) => dispatch(updateShiftToAdd(newShift)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Addshifts);
