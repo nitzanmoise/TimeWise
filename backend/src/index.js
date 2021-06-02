@@ -1,7 +1,7 @@
 /**
  * Required External Modules
  */
-
+const path = require('path');
 const express = require("express");
 const cors = require("cors");
 const helmet = require("helmet");
@@ -16,6 +16,14 @@ const { messagesRouter } = require("./messages/messages.router");
 
 const app = express();
 const apiRouter = express.Router();
+
+app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html')); //serving build folder
+});
+
 
 /**
  *  App Configuration
@@ -41,3 +49,11 @@ app.use(function (err, req, res, next) {
 app.listen(serverPort, () =>
   console.log(`API Server listening on port ${serverPort}`)
 );
+
+
+
+
+
+
+
+
