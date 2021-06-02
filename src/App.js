@@ -64,7 +64,7 @@ function App(props) {
         <Switch>
           {/* <ProtectedRoute path="/home" component={Home} /> */}
           {/* <ProtectedRoute path="/TimWise" component={Home} /> */}
-          <Route path="/TimWise">
+          <Route path="/TimeWise">
             <Home />
           </Route>
           <ProtectedRoute path="/calendar" component={Calendar} />
