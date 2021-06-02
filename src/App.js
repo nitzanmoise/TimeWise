@@ -63,8 +63,10 @@ function App(props) {
       <Router>
         <Switch>
           {/* <ProtectedRoute path="/home" component={Home} /> */}
-          <ProtectedRoute path="/TimWise" component={Home} />
-
+          {/* <ProtectedRoute path="/TimWise" component={Home} /> */}
+          <Route path="/TimWise">
+            <Home />
+          </Route>
           <ProtectedRoute path="/calendar" component={Calendar} />
           <ProtectedRoute path="/MyProfile" component={MyProfile} />
           <ProtectedRoute path="/usersList" component={Users} />
