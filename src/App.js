@@ -62,7 +62,9 @@ function App(props) {
       {/* <ShiftList></ShiftList> */}
       <Router>
         <Switch>
-          <ProtectedRoute path="/home" component={Home} />
+          {/* <ProtectedRoute path="/home" component={Home} /> */}
+          <ProtectedRoute path="/TimWise" component={Home} />
+
           <ProtectedRoute path="/calendar" component={Calendar} />
           <ProtectedRoute path="/MyProfile" component={MyProfile} />
           <ProtectedRoute path="/usersList" component={Users} />
@@ -88,7 +90,7 @@ function App(props) {
           <ProtectedRoute path="/profile" component={Profile} />
           <ProtectedRoute path="/external-api" component={ExternalApi} />
 
-          {isAuthenticated && <Redirect to="/home" from="/" />}
+          {isAuthenticated && <Redirect to="/TimeWise" from="/" />}
           <Route path="/" exact component={HomePage} />
 
           {/* <Route path="/calendar">
