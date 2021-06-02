@@ -61,17 +61,26 @@ function Home(props) {
           <Grid container spacing={3}>
             <Grid item xs={12}>
               <h2 className={(classes.paper, "marginTopHome1")}>
-                {currentPageName} </h2>
-              <Divider style={{ marginTop: '-5px', marginBottom: '15px' }} variant="middle" />
+                {currentPageName}{" "}
+              </h2>
+              <Divider
+                style={{ marginTop: "-5px", marginBottom: "15px" }}
+                variant="middle"
+              />
             </Grid>
             <Grid justify="left" alignItems="left" item xs={6}>
-              <div >
-                <p className={(classes.paper, "marginTopHome1")} style={{ fontSize: "14px", fontWeight: '600' }}>
+              <div>
+                <p
+                  className={(classes.paper, "marginTopHome1")}
+                  style={{ fontSize: "14px", fontWeight: "600" }}
+                >
                   {/* {JSON.stringify(user, null, 2)} */}
-                  Hello {user.nickname}
+                  {/* Hello {user.nickname} */}
                 </p>
                 <p className={"marginTopHome1 secondaryOpacity75"}>Manager</p>
-                <p className={"marginTopHome1 secondaryOpacity75"}>Ny Liv Spa</p>
+                <p className={"marginTopHome1 secondaryOpacity75"}>
+                  Ny Liv Spa
+                </p>
               </div>
             </Grid>
             <Grid item xs={6}>
@@ -101,7 +110,13 @@ function Home(props) {
             </Grid>
             <Box
               borderBottom={1}
-              style={{ width: "100vw", borderColor: "gray", margin: "10px", marginTop: "1px", opacity: "50%", }}
+              style={{
+                width: "100vw",
+                borderColor: "gray",
+                margin: "10px",
+                marginTop: "1px",
+                opacity: "50%",
+              }}
             />
             <Grid style={{ marginTop: "10px" }} item xs={6}>
               <h3 className="marginTopHome2 actionNameHP">Edit a shift</h3>
@@ -121,7 +136,13 @@ function Home(props) {
             </Grid>
             <Box
               borderBottom={1}
-              style={{ width: "100vw", borderColor: "gray", margin: "10px", marginTop: "1px", opacity: "50%", }}
+              style={{
+                width: "100vw",
+                borderColor: "gray",
+                margin: "10px",
+                marginTop: "1px",
+                opacity: "50%",
+              }}
             />
             <Grid style={{ marginTop: "10px" }} item xs={6}>
               <h3 className="marginTopHome2 actionNameHP">Shift requests</h3>
@@ -141,7 +162,13 @@ function Home(props) {
             </Grid>
             <Box
               borderBottom={1}
-              style={{ width: "100vw", borderColor: "gray", margin: "10px", marginTop: "1px", opacity: "50%", }}
+              style={{
+                width: "100vw",
+                borderColor: "gray",
+                margin: "10px",
+                marginTop: "1px",
+                opacity: "50%",
+              }}
             />
           </Grid>
         </Container>
