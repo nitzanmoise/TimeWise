@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/TimeWise/static/css/main.29049599.chunk.css",
-    "main.js": "/TimeWise/static/js/main.de20dd9b.chunk.js",
-    "main.js.map": "/TimeWise/static/js/main.de20dd9b.chunk.js.map",
+    "main.js": "/TimeWise/static/js/main.a1736bda.chunk.js",
+    "main.js.map": "/TimeWise/static/js/main.a1736bda.chunk.js.map",
     "runtime-main.js": "/TimeWise/static/js/runtime-main.87e729c5.js",
     "runtime-main.js.map": "/TimeWise/static/js/runtime-main.87e729c5.js.map",
     "static/js/2.a6416e2e.chunk.js": "/TimeWise/static/js/2.a6416e2e.chunk.js",
@@ -22,6 +22,6 @@
     "static/js/runtime-main.87e729c5.js",
     "static/js/2.a6416e2e.chunk.js",
     "static/css/main.29049599.chunk.css",
-    "static/js/main.de20dd9b.chunk.js"
+    "static/js/main.a1736bda.chunk.js"
   ]
 }
