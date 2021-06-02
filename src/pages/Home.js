@@ -68,7 +68,7 @@ function Home(props) {
               <div >
                 <p className={(classes.paper, "marginTopHome1")} style={{ fontSize: "14px", fontWeight: '600' }}>
                   {/* {JSON.stringify(user, null, 2)} */}
-                  Hello {user.nickname}
+                  {/* Hello {user.nickname} */}
                 </p>
                 <p className={"marginTopHome1 secondaryOpacity75"}>Manager</p>
                 <p className={"marginTopHome1 secondaryOpacity75"}>Ny Liv Spa</p>
