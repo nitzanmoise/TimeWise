@@ -18,10 +18,13 @@ const app = express();
 const apiRouter = express.Router();
 
 app.use(express.static(__dirname));
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, '../../build')));
+
+console.log(path.join(__dirname, '../../build'));
+console.log(path.join(__dirname, '../../build', 'index.html'));
 
 app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html')); //serving build folder
+  res.sendFile(path.join(__dirname, '../../build', 'index.html')); //serving build folder
 });
 
 
